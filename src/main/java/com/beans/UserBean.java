@@ -1,11 +1,12 @@
 package com.beans;
 
-import org.springframework.stereotype.Component;
-
 public class UserBean {
+	
+	private Address address;
+	
 	private String _strName;
 	private int _contactNo;
-	private String _strAddress;
+	//private String _strAddress;
 	
 	UserBean(){
 		System.out.println("In Constructor");
@@ -27,10 +28,16 @@ public class UserBean {
 	public void setContactNo(int contactNo) {
 		this._contactNo = contactNo;
 	}
-	public String getAddress() {
+	/*public String getAddress() {
 		return _strAddress;
 	}
 	public void setAddress(String address) {
 		this._strAddress = address;
+	}*/
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address _strAddress) {
+		this.address = _strAddress;
 	}	
 }
